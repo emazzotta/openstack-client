@@ -1,6 +1,6 @@
 FROM python:2.7-jessie
 
-MAINTAINER Emanuele Mazzotta <hello@mazzotta.me>
+LABEL maintainer="hello@mazzotta.me"
 
 ARG BUILD_DATE
 ARG VCS_REF
