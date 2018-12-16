@@ -24,6 +24,5 @@ RUN apt-get update && \
 # Make using the CLI nicer
 COPY .bashrc /root/.bashrc
 
-RUN mkdir /workspace
 WORKDIR /workspace
 
