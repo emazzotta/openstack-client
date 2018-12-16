@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:3.7-slim
 
 LABEL maintainer="hello@mazzotta.me"
 
@@ -19,7 +19,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN apt-get update && \
     apt-get install -y gcc && \
     pip install python-openstackclient python-heatclient && \
-    rm -rf /root/.cache/pip
+    rm -rf /root/.cache /var/lib/apt/lists
 
 # Make using the CLI nicer
 COPY .bashrc /root/.bashrc
